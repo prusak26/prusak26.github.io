@@ -3777,11 +3777,11 @@ Date.now||(Date.now=function(){return(new Date).getTime()}),function(){"use stri
           _this.changeBalanser(a.source);
         }
         if (object.movie.number_of_seasons || balanser == 'pub' || balanser == 'bazon') filter.render().find('.filter--filter').show();
-			  else filter.render().find('.filter--filter').hide();
+			  else filter.render().find('.filter--filter').show();
       };
 
       if (object.movie.number_of_seasons || balanser == 'pub' || balanser == 'bazon') filter.render().find('.filter--filter').show();
-		  else filter.render().find('.filter--filter').hide();
+		  else filter.render().find('.filter--filter').show();
 		  filter.render().find('.filter--sort').on('hover:enter', function () {
 				$('body').find('.selectbox__title').text(Lampa.Lang.translate('online_balanser'));
 			});
