@@ -28,7 +28,7 @@ Date.now||(Date.now=function(){return(new Date).getTime()}),function(){"use stri
         Lampa.Extensions.show();
         setTimeout(function (){
           $('.extensions__item-author', Lampa.Extensions.render()).map(function (i, e){
-            if(e.textContent != '@modss_group') $(e).html('💎').append('<span class="extensions__item-premium">VIP buy at @modssmy_bot</span>');
+            if(e.textContent == '@modss_group') $(e).html('💎').append('<span class="extensions__item-premium">VIP buy at @modssmy_bot</span>');
           });
         }, 200);
       });
