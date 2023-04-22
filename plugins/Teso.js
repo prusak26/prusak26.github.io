@@ -432,7 +432,7 @@
     function rezka(component, _object) {
       var network = new Lampa.Reguest();
       var extract = {};
-      var embed = component.proxy('rezka') + 'http://hdrezkagpwprs.org/';
+      var embed = component.proxy('rezka') + 'http://voidboost.tv/';
       var object = _object;
       var select_title = '';
       var select_id = '';
