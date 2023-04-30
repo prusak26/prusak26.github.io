@@ -31,13 +31,13 @@
         voice: []
       };
       var balansers_with_search = ['eneyida', 'seasonvar', 'lostfilmhd', 'kinotochka', 'kinopub', 'kinoprofi', 'kinokrad', 'kinobase', 'filmix', 'redheadsound', 'animevost', 'animego', 'animedia', 'animebesst', 'anilibria', 'rezka'];
-      function account(url) {
-        if (url.indexOf('account_email')) {
-          var email = Lampa.Storage.get('account_email');
-          if (email) url = Lampa.Utils.addUrlComponent(url, 'account_email=' + encodeURIComponent(email));
-        }
-        return url;
-      }
+      //function account(url) {
+        //if (url.indexOf('account_email') == 1) {
+          //var email = Lampa.Storage.get('account_email');
+          //if (email) url = Lampa.Utils.addUrlComponent(url, 'account_email=' + encodeURIComponent(email));
+        //}
+        //return url;
+      //}
       function balanserName(j) {
         var bals = j.balanser;
         var name = j.name.split(' ')[0];
@@ -121,7 +121,7 @@
             if (object.movie.kinopoisk_id) query.push('kinopoisk_id=' + (object.movie.kinopoisk_id || ''));
             var url = window.lampac_localhost + 'externalids?' + query.join('&');
             network.timeout(5000);
-            network.silent(account(url), function (json) {
+            network.silent(function (json) {
               for (name in json) {
                 object.movie[name] = json[name];
               }
@@ -219,7 +219,7 @@
           };
           var fin = function fin(call) {
             network.timeout(3000);
-            network.silent(account(url), function (json) {
+            network.silent(function (json) {
               life_wait_times++;
               filter_sources = [];
               sources = {};
